@@ -1,0 +1,228 @@
+GitHub LINK - https://github.com/shubham-007-yad/flask-git-assignment.git   (Public)
+
+I PREFER PLEASE CHECK THE SCREENSHOT AND GITHUB THROUGH ABOVE LINK AND ALSO ALL COMMITS ATE AVAILABLE ON GITHUB 
+
+
+Task 1: Repository Setup
+
+Objective:
+
+Create a GitHub repository and clone it using SSH.
+
+Commands used
+ssh-keygen
+git clone git@github.com:shubham-007-yad/flask-git-assignment.git
+
+
+check this folder : - assignment - 4 screenshot/githubrepo.png
+
+
+Task 2: Create Username Branch
+Commands
+git switch -c shubham
+git add .
+git commit -m "create commit"
+git push origin shubham
+
+
+check this folder - assignment - 4 screenshot/create_branch.png
+
+
+Task 3: Merge Username Branch
+git switch main
+git merge shubham
+git push origin main
+
+check this folder - assignment - 4 screenshot/git_merge.png
+
+
+
+
+
+Task 4: Create New Branch and Update JSON
+
+git switch -c shubham_new
+
+Updated data.json for the /api route.
+
+git add data.json
+git commit -m "change datajson"
+git push origin shubham_new
+
+check this image - assignment - 4 screenshot/data_json.png
+
+in this image i showed the result by camparing it in github while pull request 
+
+
+
+
+Task 5: Merge Updated JSON
+git switch main
+git merge shubham_new
+git push origin main
+
+
+check this image - assignment - 4 screenshot/data_json.png
+
+
+
+
+
+
+Task 6: Create Parallel Branches
+git branch master_1
+git branch master_2
+
+
+
+
+
+
+
+Task 7: To-Do Frontend in master_1
+
+Switched to:
+
+git switch master_1
+
+Created the To-Do page with:
+
+Item Name
+Item Description
+
+Then:
+
+git add templates/todo.html
+git commit -m "todo frontend"
+git push origin master_1
+
+
+check this  assignment - 4 screenshot/todo.png
+
+
+
+
+Task 8: To-Do Backend in master_2
+
+Switched to:
+
+git switch master_2
+
+Added the Flask route:
+
+@app.route('/submittodoitem', methods=['POST'])
+
+The route accepts:
+
+Item Name
+Item Description
+
+The data is stored in MongoDB.
+
+Then:
+
+git add app.py
+git commit -m "To-Do backend API"
+git push origin master_2
+
+
+
+
+
+
+Task 9: Merge Both Features into Main
+
+Merged the frontend and backend changes into main.
+
+Example commands:
+
+git switch main
+git merge master_1
+git merge master_2
+git push origin main
+
+
+
+
+
+
+
+Task 10: Add Item ID
+
+On master_1, added the Item ID field to templates/todo.html.
+
+git add templates/todo.html
+git commit -m "add itemid"
+
+
+
+
+
+
+
+
+git add templates/todo.html
+git commit -m "add itemuuid"
+
+
+
+
+
+
+
+Task 12: Add Item Hash
+
+Added the Item Hash field separately.
+
+git add templates/todo.html
+git commit -m "add itemhash"
+
+
+
+
+
+Task 13: Merge master_1 into Main
+git switch main
+git merge master_1
+git push origin main
+
+
+
+
+
+Task 14: Git Soft Reset
+
+Identified the commit containing only the Item ID field and performed:
+
+git reset --soft 0902328
+
+
+
+
+Task 15: Recommit UUID and Hash Changes
+
+The staged changes were recommitted:
+
+git commit -m "Recommit Item UUID and Item Hash changes"
+
+
+
+
+
+
+Task 16: Rebase master_1 onto Updated Main
+
+Performed:
+
+git rebase main master_1
+
+A conflict occurred in:
+
+templates/todo.html
+
+The conflict was resolved, then:
+
+git add templates/todo.html
+git rebase --continue
+
+The rebase completed successfully
