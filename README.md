@@ -1,4 +1,9 @@
-github link - git@github.com:shubham-007-yad/kubernetes.git
+GITHUB LINK - https://github.com/shubham-007-yad/kubernetes.git
+
+
+-              git@github.com:shubham-007-yad/kubernetes.git
+
+
 
 This is a simple Kubernetes project where I used Flask, Node.js, Docker and Kubernetes with Minikube
 
